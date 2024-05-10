@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public String getUser(User user){
-      return user.toString();
+        String u=user.toString();
+      return u;
     }
 }
