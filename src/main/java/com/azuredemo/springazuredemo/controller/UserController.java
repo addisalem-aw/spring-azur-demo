@@ -6,12 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
     private UserService userService;
-    @GetMapping
-    public String getUser(){
-       // String u=userService.getUser(user);
-        return "Success message good";
+    @GetMapping("/user")
+    public ResponseEntity<String> getUser(){
+        User user=new User(1,"Jone");
+        String u=userService.getUser(user);
+        return ResponseEntity.ok(u);
     }
 }
