@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private UserService userService;
     @GetMapping
-    public String getUser(@RequestBody User user){
-        String u=userService.getUser(user);
-        return u;
+    public String getUser(){
+       // String u=userService.getUser(user);
+        return "Success message good";
     }
 }
